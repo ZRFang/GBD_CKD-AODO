@@ -2,7 +2,7 @@
 library(ggplot2)
 library(ggrepel) # 用于防止文字重叠
 
-# 1. 录入数据 (来自文中的 Table 1 和 Table 2)
+# 1. 录入数据 (来自文中的 Table s1 和 Table s2)
 # -----------------------------------------------------------
 data <- data.frame(
   Name = c(
@@ -106,3 +106,4 @@ label_text <- paste0("r = ", round(r_value, 3), "\n",
 
 # 把文字加到图上 (x和y的坐标根据 log 值调整，例如 x=5.5, y=6.0 左右)
 p + annotate("text", x = 5.5, y = 5.5, label = label_text, size = 3, fontface = "italic")
+
