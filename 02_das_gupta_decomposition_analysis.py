@@ -9,8 +9,7 @@ file_daly = r"D:\GBD_Project\Decomposition_analysis\input_daly.csv"  # 疾病数
 file_pop = r"D:\GBD_Project\Decomposition_analysis\input_pop.csv"  # 人口数据文件
 
 # 目标疾病 (一次跑一个)
-target_cause = "Alzheimer's disease and other dementias"
-# target_cause = "Alzheimer's disease and other dementias"
+target_cause = "Chronic kidney disease"
 
 # SDI 顺序
 sdi_order = ['Global', 'High SDI', 'High-middle SDI', 'Middle SDI', 'Low-middle SDI', 'Low SDI']
@@ -173,4 +172,5 @@ ax.legend(loc='upper left', frameon=False)
 plt.tight_layout()
 plt.savefig('Figure5_Decomposition.png', dpi=300)
 print("Figure 5 绘制完成！")
+
 plt.show()
