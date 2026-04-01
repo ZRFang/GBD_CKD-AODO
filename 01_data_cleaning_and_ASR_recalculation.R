@@ -13,7 +13,6 @@ gbd_weights_40plus <- tibble(
 df_asr_recalculated <- df_rate %>%
   filter(age_name %in% gbd_weights_40plus$age_name) %>%
   left_join(gbd_weights_40plus, by = "age_name") %>%
-  # ⚠️ 修改处：将 year_id 改为了 year
   group_by(location_name, year, sex_name, cause_name, measure_name) %>%
   summarise(
     asr_val = sum(val * rescaled_weight, na.rm = TRUE),
